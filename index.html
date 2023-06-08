@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hoja de Vida de Felipe Segura</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    body {
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    .title {
+      font-size: 72px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      color: #ff4081;
+      animation: titleAnimation 2s ease-in-out infinite;
+    }
+
+    @keyframes titleAnimation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2) rotateZ(10deg);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .card {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: cardAnimation 1.5s forwards;
+    }
+
+    @keyframes cardAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    .card-title {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #ff4081;
+      text-transform: uppercase;
+      text-align: center;
+      animation: textAnimation 2s infinite;
+    }
+
+    @keyframes textAnimation {
+      0% {
+        letter-spacing: 8px;
+      }
+      50% {
+        letter-spacing: 2px;
+      }
+      100% {
+        letter-spacing: 8px;
+      }
+    }
+
+    .card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+      width: 50%;
+      text-align: center;
+    }
+
+    .skill-icon {
+      font-size: 48px;
+      color: #ff4081;
+      animation: skillIconAnimation 1s infinite;
+    }
+
+    @keyframes skillIconAnimation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .background-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: backgroundAnimation 10s infinite;
+    }
+
+    @keyframes backgroundAnimation {
+      0% {
+        background-color: #000;
+      }
+      50% {
+        background-color: #ff4081;
+      }
+      100% {
+        background-color: #000;
+      }
+    }
+
+    .sparkle-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background-image: radial-gradient(#ff4081 1px, transparent 1px);
+      background-size: 20px 20px;
+      animation: sparkleAnimation 0.5s infinite;
+    }
+
+    @keyframes sparkleAnimation {
+      from {
+        background-position: 0 0, 0 0;
+      }
+      to {
+        background-position: 20px 0, 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="sparkle-animation"></div>
+  <div class="container">
+    <h1 class="title animate__animated animate__bounceInDown">¡La Alucinante Hoja de Vida de Felipe Segura!</h1>
+    <div class="card animate__animated animate__fadeInUpBig">
+      <h2 class="card-title">¡Mis Increíbles Habilidades Académicas!</h2>
+      <ul>
+        <li><i class="skill-icon animate__animated animate__heartBeat animate__delay-1s">🎓</i> 3 semestres de ingeniería mecánica</li>
+        <li><i class="skill-icon animate__animated animate__heartBeat animate__delay-2s">🖥️</i> 6 semestres de ingeniería de sistemas</li>
+        <li><i class="skill-icon animate__animated animate__heartBeat animate__delay-3s">🌍</i> Nivel B2 en inglés</li>
+      </ul>
+    </div>
+
+    <div class="card animate__animated animate__fadeInUpBig">
+      <h2 class="card-title">¡Mis Increíbles Habilidades Deportivas!</h2>
+      <p class="animate__animated animate__shakeX animate__delay-2s">🎾 ¡Soy un campeón en el tenis!</p>
+    </div>
+
+    <div class="card animate__animated animate__fadeInUpBig">
+      <h2 class="card-title">¡Mis Otras Increíbles Habilidades!</h2>
+      <ul>
+        <li><i class="skill-icon animate__animated animate__pulse animate__delay-3s">☕</i> Experto barista</li>
+        <li><i class="skill-icon animate__animated animate__pulse animate__delay-4s">🇵🇹</i> Hablo portugués</li>
+        <li><i class="skill-icon animate__animated animate__pulse animate__delay-5s">🍻</i> Bebedor de alcohol con los panas</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(window).scroll(function() {
+      $(".card").each(function(index) {
+        $(this).addClass("animate__delay-" + (index + 1) + "s");
+      });
+    });
+  </script>
+</body>
+</html>
